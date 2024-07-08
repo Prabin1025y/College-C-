@@ -1,3 +1,5 @@
+//write a c++ program to swap two private data members using friend functions.
+
 #include <iostream>
 using namespace std;
 

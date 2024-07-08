@@ -21,7 +21,6 @@ public:
         }
     }
 
-    // Copy constructor
     MATRIX(const MATRIX &other) : rows(other.rows), cols(other.cols)
     {
         mat = new int *[rows];
@@ -58,7 +57,7 @@ public:
         }
     }
 
-    void display() const
+    void display()
     {
         for (int i = 0; i < rows; ++i)
         {

@@ -7,6 +7,7 @@
 // - member function to display time in HH:MM:SS format
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 class TIME
@@ -40,7 +41,7 @@ public:
     {
         int totalSeconds1 = hours * 3600 + minutes * 60 + seconds;
         int totalSeconds2 = t.hours * 3600 + t.minutes * 60 + t.seconds;
-        int diffSeconds = totalSeconds1 - totalSeconds2;
+        int diffSeconds = abs(totalSeconds1 - totalSeconds2);
 
         int h = diffSeconds / 3600;
         diffSeconds %= 3600;
@@ -63,8 +64,8 @@ public:
 
 int main()
 {
-    TIME t1(2, 30, 45);
-    TIME t2(1, 45, 30);
+    TIME t1(1, 30, 45);
+    TIME t2(2, 45, 30);
 
     TIME t3 = t1 + t2;
     TIME t4 = t1 - t2;
