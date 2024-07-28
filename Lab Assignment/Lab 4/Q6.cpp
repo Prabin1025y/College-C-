@@ -50,7 +50,7 @@ public:
     }
 };
 
-class FinalExam : public Student
+class FinalExam : public Student 
 {
 protected:
     int marks[7];
@@ -111,4 +111,4 @@ int main()
     r.calculate();
     r.display();
     return 0;
-}
+} 

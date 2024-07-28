@@ -42,7 +42,7 @@
 //             ~Transmission() {}
 //             void print();
 //         };
-// a.Write a main () function that creates an instance object of Auto called Car, which has thefollowing initial data: there is a quantity of five(5) on inventory, and two(2) on reorder;the price per unit is $15,545.91, and the description is that of the car obtained from theToyota. Initialize the object Car, and print out all its vital facts.
+// a.Write a main () function that creates an instance object of Auto called Car, which has thefollowing initial data: there is a quantity of five(5) on inventory, and two(2) on reorder;the price per unit is $15,545.91, and the escription is that of the car obtained from theToyota. Initialize the object Car, and print out all its vital facts.
 // b.A Transmission is purchased from Aztec Inc., and must be inventoried. There are 25 ofthem, with 10 more on reorder. Their price is $1789.98. Instantiate and initialize anobject for Transmission, and provide the same information
 
 #include <iostream>
@@ -128,4 +128,4 @@ int main()
         Transmission Transmission(25, 10, 1789.98, "Transmission purchased from Aztec Inc.", "Aztec Inc.");
         Transmission.print();
         return 0;
-}
+} 
