@@ -21,17 +21,17 @@ public:
         }
     }
 
-    getHour()
+    int getHour()
     {
         return hour;
     }
 
-    getMinute()
+    int getMinute()
     {
         return minute;
     }
 
-    getSecond()
+    int getSecond()
     {
         return second;
     }
