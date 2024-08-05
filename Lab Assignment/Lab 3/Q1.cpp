@@ -34,16 +34,6 @@ class NepCurrency
     int rupees, paisa;
 
 public:
-    class NegativeCurrency
-    {
-    public:
-        char message[100];
-        NegativeCurrency(char *msg)
-        {
-            strcpy(message,msg);
-        }
-    };
-
     NepCurrency(int rp = 0, int ps = 0)
     {
         rupees = rp;
@@ -51,7 +41,8 @@ public:
 
         if (rupees < 0 || paisa < 0)
         {
-            throw NegativeCurrency("Currency cannot be negative.");
+            cout << "currency cannot be negative";
+            exit(1);
         }
 
         if (paisa >= 100)
@@ -70,13 +61,14 @@ public:
 
         if (rupees < 0 || paisa < 0)
         {
-            throw NegativeCurrency("Currency cannot be negative.");
+            cout << "currency cannot be negative";
+            exit(1);
         }
 
         if (paisa >= 100)
         {
             rupees += paisa / 100;
-            paisa %= paisa % 100;
+            paisa %= 100;
         }
     }
 
@@ -98,17 +90,7 @@ public:
 int main()
 {
     NepCurrency n1;
-    try
-    {
-
-        n1.input();
-    }
-    catch (NepCurrency::NegativeCurrency &e)
-    {
-        cout << e.message << endl;
-        exit(1);
-    }
-
+    n1.input();
     USCurrency u1 = n1;
     n1.display();
     u1.display();
